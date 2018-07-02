@@ -1,20 +1,19 @@
 $LOAD_PATH.push File.expand_path('lib', __dir__)
 
 # Maintain your gem's version:
-require 'file_utility/version'
+require 'simple_file/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = 'file_utility'
-  s.version     = FileUtility::VERSION
+  s.name        = 'simple_file'
+  s.version     = SimpleFile::VERSION
   s.authors     = ['Nelson Lee']
   s.email       = ['ilung.me@gmail.com']
   s.homepage    = 'http://ilung.me.com'
-  s.summary     = 'Summary of FileUtility.'
-  s.description = 'Description of FileUtility.'
+  s.summary     = 'Simple File Import / Export'
+  s.description = 'Provide simple functionalities for file import and export.'
   s.license     = 'MIT'
-
-  s.files = Dir['{app,config,db,lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
+  s.files       = Dir['{lib}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
 
   s.add_development_dependency 'awesome_print', '~> 1.6'
   s.add_development_dependency 'bundler', '~> 1.10'

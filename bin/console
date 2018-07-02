@@ -2,7 +2,7 @@
 
 require 'bundler/setup'
 require 'dotenv/load'
-require 'file_utility'
+require 'simple_file'
 
 # You can add fixtures and/or initialization code here to make experimenting
 # with your gem easier. You can also use a different console, if you like.
@@ -13,7 +13,7 @@ require 'byebug'
 
 require 'irb'
 
-FileUtility.setup do |config|
+SimpleFile.setup do |config|
   # your configs
 end
 

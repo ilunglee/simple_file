@@ -5,13 +5,13 @@ require 'csv'
 require 'extensions/array'
 
 # Require Shared Features
-require 'file_utility/stream/file'
+require 'simple_file/stream/file'
 
 # Require Features
-require 'file_utility/csv'
+require 'simple_file/csv'
 
 # Base
-module FileUtility
+module SimpleFile
 
   @log_level = nil
   @logger    = nil
@@ -20,7 +20,7 @@ module FileUtility
   class << self
 
     # Extend array class
-    class ::Array; include FileUtility::Array; end
+    class ::Array; include SimpleFile::Array; end
 
     attr_accessor :encoding
 

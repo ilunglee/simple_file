@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    file_utility (0.1.0)
+    simple_file (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -33,7 +33,7 @@ DEPENDENCIES
   bundler (~> 1.10)
   byebug
   dotenv
-  file_utility!
+  simple_file!
   rake (~> 10.0)
   rspec (~> 3.3)
 

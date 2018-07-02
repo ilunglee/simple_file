@@ -1,14 +1,11 @@
-# FileUtility
-Short description and motivation.
-
-## Usage
-How to use my plugin.
+# SimpleFile
+Provide simple functionalities for file import and export
 
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'file_utility'
+gem 'simple_file'
 ```
 
 And then execute:
@@ -18,8 +15,40 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install file_utility
+$ gem install simple_file
 ```
+
+## Usage
+#### SETUP
+```ruby
+# rails
+# config/initializers/alphapay.rb
+SimpleFile.setup do |s|
+  s.encoding = CUSTOM_ENCODING # defaults is 'UTF-8'
+end
+```
+---
+#### IMPORT
+```ruby
+file = File.open(FILE_PATH)
+# default import
+importer = SimpleFile::CSV.new
+# import with custom mapping
+importer = SimpleFile::CSV.new(mapping: { 'col1': 'new_col1' })
+
+importer.import(file)
+importer.results
+importer.count
+importer.file
+importer.col_sep
+importer.encoding
+importer.mapping
+importer.errors
+```
+
+## ToDo
+- csv export
+- excel import and export
 
 ## Contributing
 - Clone this repo and go into the gem top-level directory and run `bundle install`

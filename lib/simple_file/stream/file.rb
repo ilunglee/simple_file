@@ -1,4 +1,4 @@
-module FileUtility
+module SimpleFile
 
   module Stream
 
@@ -12,7 +12,7 @@ module FileUtility
       # ClassMethods
       module ClassMethods
 
-        METHOD_WHITELIST = %i[import export].freeze
+        METHOD_WHITELIST = %i[].freeze
 
         def respond_to_missing?(method_name, include_private = false)
           callable?(method_name) || super
@@ -30,7 +30,7 @@ module FileUtility
 
       def encode_attr(field)
         return if field.nil?
-        field.encode(FileUtility.encoding, invalid: :replace, undef: :replace)
+        field.encode(SimpleFile.encoding, invalid: :replace, undef: :replace)
       end
 
     end

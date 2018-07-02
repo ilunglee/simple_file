@@ -1,4 +1,4 @@
-module FileUtility
+module SimpleFile
 
   # Extends Array
   module Array
